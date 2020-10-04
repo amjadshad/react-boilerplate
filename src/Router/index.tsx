@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import { BrandedPageEditor } from "../pages/BrandedPageEditor";
+import BrandedPageEditor from "../pages/BrandedPageEditor";
 import { MainLayout } from "../Layouts/MainLayout";
 import { BrandedPageDisplay } from "../pages/BrandedPageDisplay";
 
