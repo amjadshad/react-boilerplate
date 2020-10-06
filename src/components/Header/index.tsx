@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import "./Header.scss";
+import './Header.scss'
 
 export const Header: React.FC = () => {
   return (
@@ -11,5 +11,5 @@ export const Header: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

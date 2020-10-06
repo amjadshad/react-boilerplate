@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import "./Footer.scss";
+import './Footer.scss'
 
 export const Footer: React.FC = () => {
   return (
@@ -11,5 +11,5 @@ export const Footer: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

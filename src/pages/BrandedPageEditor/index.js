@@ -1,4 +1,64 @@
-import React, { Component } from "react";
+import React, { useRef } from 'react'
+import { render } from 'react-dom'
+
+import EmailEditor from 'react-email-editor'
+
+import designData from './sample'
+import designData2 from './sample2'
+
+const App = (props) => {
+  const emailEditorRef = useRef(null)
+
+  React.useEffect(() => {
+    console.log('REF', emailEditorRef)
+  }, [])
+
+  const exportHtml = () => {
+    emailEditorRef.current.editor.exportHtml((data) => {
+      const { design, html } = data
+      console.log('exportHtml', html)
+    })
+  }
+
+  const saveDesign = () => {
+    emailEditorRef.current.editor.saveDesign((design) => {
+      console.log('saveDesign', design)
+      console.log('JSON', JSON.stringify(design, null, 2))
+    })
+  }
+
+  const loadDesign = () => {
+    console.log('LOADING DESIGN')
+    emailEditorRef.current.editor.loadDesign(designData)
+  }
+  const loadDesign2 = () => {
+    console.log('LOADING DESIGN')
+    emailEditorRef.current.editor.loadDesign(designData2)
+  }
+
+  const onLoad = () => {
+    // you can load your template here;
+    // const templateJson = {};
+    // emailEditorRef.current.editor.loadDesign(templateJson);
+  }
+
+  return (
+    <div>
+      <div>
+        <button onClick={exportHtml}>Export HTML</button>
+        <button onClick={saveDesign}>Save Design</button>
+        <button onClick={loadDesign}>Load Design</button>
+        <button onClick={loadDesign2}>Load Design 2</button>
+      </div>
+
+      <EmailEditor ref={emailEditorRef} onLoad={onLoad} />
+    </div>
+  )
+}
+
+export default App
+
+/* import React, { Component } from "react";
 import { loadScript } from "./loadScript";
 // import pkg from "../package.json";
 
@@ -97,9 +157,9 @@ class BrandedPageEditor extends Component {
   setMergeTags = (mergeTags) => {
     this.editor.setMergeTags(mergeTags);
   };
-}
+} */
 
-export default BrandedPageEditor;
+/* export default BrandedPageEditor; */
 /* 
   options={{
     id: "editor-container",

@@ -1,0 +1,244 @@
+{
+  "counters": {
+    "u_column": 3,
+    "u_row": 3,
+    "u_content_text": 1,
+    "u_content_image": 1,
+    "u_content_menu": 1
+  },
+  "body": {
+    "rows": [
+      {
+        "cells": [1],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "text",
+                "values": {
+                  "containerPadding": "10px",
+                  "_meta": {
+                    "htmlID": "u_content_text_1",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "color": "#000000",
+                  "textAlign": "left",
+                  "lineHeight": "140%",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "hideDesktop": false,
+                  "hideMobile": false,
+                  "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 14px; line-height: 19.6px;\">My text blah blah</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>"
+                }
+              },
+              {
+                "type": "menu",
+                "values": {
+                  "containerPadding": "10px",
+                  "_meta": {
+                    "htmlID": "u_content_menu_1",
+                    "htmlClassNames": "u_content_menu"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "menu": {
+                    "items": [
+                      {
+                        "key": "1602019220576",
+                        "text": "Google",
+                        "link": {
+                          "name": "web",
+                          "attrs": {
+                            "href": "{{href}}",
+                            "target": "{{target}}"
+                          },
+                          "values": {
+                            "href": "https://www.google.com/",
+                            "target": "_blank"
+                          }
+                        }
+                      },
+                      {
+                        "key": "1602019244986",
+                        "text": "Google search",
+                        "link": {
+                          "name": "web",
+                          "attrs": {
+                            "href": "{{href}}",
+                            "target": "{{target}}"
+                          },
+                          "values": {
+                            "href": "https://www.google.com/search?sxsrf=ALeKk02Ys6EjQrVrJbwnyd8jJLeQ_UIwcg%3A1602019266826&ei=wt98X-GDMoLwsAWatbrACA&q=cats+being+jerks&oq=cats+being+&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDJAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECAAQRzoICAAQsQMQgwE6BQgAELEDOgsILhCxAxDHARCjAjoCCC46CAguELEDEJMCOgcILhCxAxBDOgUILhCxAzoKCC4QsQMQQxCTAjoHCC4QsQMQCjoFCAAQkgM6CgguELEDEAoQkwI6CgguEMcBEK8BEApQghBY3iBguypoAHADeACAAaMBiAGPCZIBAzMuOJgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab",
+                            "target": "_blank"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "fontFamily": {
+                    "label": "Arial",
+                    "value": "arial,helvetica,sans-serif"
+                  },
+                  "fontSize": "14px",
+                  "textColor": "#444444",
+                  "linkColor": "#0068A5",
+                  "align": "center",
+                  "layout": "horizontal",
+                  "separator": "",
+                  "padding": "5px 15px",
+                  "hideDesktop": false,
+                  "hideMobile": false
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "_meta": {
+                "htmlID": "u_column_3",
+                "htmlClassNames": "u_column"
+              }
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "backgroundColor": "",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": false,
+            "center": true,
+            "cover": false
+          },
+          "padding": "0px",
+          "hideDesktop": false,
+          "hideMobile": false,
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_3",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true
+        }
+      },
+      {
+        "cells": [1],
+        "columns": [
+          {
+            "contents": [
+              {
+                "type": "image",
+                "values": {
+                  "containerPadding": "10px",
+                  "_meta": {
+                    "htmlID": "u_content_image_1",
+                    "htmlClassNames": "u_content_image"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "src": {
+                    "url": "https://unroll-images-production.s3.amazonaws.com/projects/0/1602019343819-Screen%20Shot%202020-10-06%20at%205.19.45%20PM.png",
+                    "width": 843,
+                    "height": 726
+                  },
+                  "textAlign": "center",
+                  "altText": "Image",
+                  "action": {
+                    "name": "web",
+                    "values": {
+                      "href": "",
+                      "target": "_blank"
+                    }
+                  },
+                  "hideDesktop": false,
+                  "hideMobile": false
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "_meta": {
+                "htmlID": "u_column_1",
+                "htmlClassNames": "u_column"
+              }
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "backgroundColor": "",
+          "columnsBackgroundColor": "",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": false,
+            "center": true,
+            "cover": false
+          },
+          "padding": "0px",
+          "hideDesktop": false,
+          "hideMobile": false,
+          "noStackMobile": false,
+          "_meta": {
+            "htmlID": "u_row_1",
+            "htmlClassNames": "u_row"
+          },
+          "selectable": true,
+          "draggable": true,
+          "duplicatable": true,
+          "deletable": true
+        }
+      }
+    ],
+    "values": {
+      "backgroundColor": "#e7e7e7",
+      "backgroundImage": {
+        "url": "",
+        "fullWidth": true,
+        "repeat": false,
+        "center": true,
+        "cover": false
+      },
+      "contentWidth": "500px",
+      "fontFamily": {
+        "label": "Arial",
+        "value": "arial,helvetica,sans-serif"
+      },
+      "linkStyle": {
+        "body": true,
+        "linkColor": "#0000ee",
+        "linkHoverColor": "#0000ee",
+        "linkUnderline": true,
+        "linkHoverUnderline": true
+      },
+      "_meta": {
+        "htmlID": "u_body",
+        "htmlClassNames": "u_body"
+      }
+    }
+  },
+  "schemaVersion": 5
+}
