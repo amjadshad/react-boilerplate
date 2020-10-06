@@ -22,8 +22,7 @@ const App = (props) => {
 
   const saveDesign = () => {
     emailEditorRef.current.editor.saveDesign((design) => {
-      console.log('saveDesign', design)
-      console.log('JSON', JSON.stringify(design, null, 2))
+      console.log('DESIGN\n', JSON.stringify(design))
     })
   }
 
@@ -32,7 +31,7 @@ const App = (props) => {
     emailEditorRef.current.editor.loadDesign(designData)
   }
   const loadDesign2 = () => {
-    console.log('LOADING DESIGN')
+    console.log('LOADING DESIGN 2')
     emailEditorRef.current.editor.loadDesign(designData2)
   }
 

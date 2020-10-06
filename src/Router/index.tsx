@@ -4,16 +4,23 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import BrandedPageEditor from '../pages/BrandedPageEditor'
 import { MainLayout } from '../Layouts/MainLayout'
 import { BrandedPageDisplay } from '../pages/BrandedPageDisplay'
+import { Home } from '../pages/Home'
 
 export const Router: React.FC = () => (
   <BrowserRouter>
-    <Route path="/branded-page">
+    <Route exact path="/">
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    </Route>
+
+    <Route exact path="/branded-page">
       <MainLayout>
         <BrandedPageDisplay />
       </MainLayout>
     </Route>
 
-    <Route path="/branded-page-edit">
+    <Route exact path="/branded-page-edit">
       <MainLayout strict={false}>
         <BrandedPageEditor />
       </MainLayout>
