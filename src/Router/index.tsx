@@ -5,22 +5,23 @@ import BrandedPageEditor from '../pages/BrandedPageEditor'
 import { MainLayout } from '../Layouts/MainLayout'
 import { BrandedPageDisplay } from '../pages/BrandedPageDisplay'
 import { Home } from '../pages/Home'
+import { PATHS } from '../constants'
 
 export const Router: React.FC = () => (
   <BrowserRouter>
-    <Route exact path="/">
+    <Route exact path={PATHS.home}>
       <MainLayout>
         <Home />
       </MainLayout>
     </Route>
 
-    <Route exact path="/branded-page">
+    <Route exact path={PATHS.brandedPageDisplay}>
       <MainLayout>
         <BrandedPageDisplay />
       </MainLayout>
     </Route>
 
-    <Route exact path="/branded-page-edit">
+    <Route exact path={PATHS.brandedPageEditor}>
       <MainLayout strict={false}>
         <BrandedPageEditor />
       </MainLayout>

@@ -1,12 +1,11 @@
 import React, { useRef } from 'react'
-import { render } from 'react-dom'
 
 import EmailEditor from 'react-email-editor'
 
 import designData from './sample'
 import designData2 from './sample2'
 
-const App = (props) => {
+const BrandedPageEditor = (props) => {
   const emailEditorRef = useRef(null)
 
   React.useEffect(() => {
@@ -50,115 +49,43 @@ const App = (props) => {
         <button onClick={loadDesign2}>Load Design 2</button>
       </div>
 
-      <EmailEditor ref={emailEditorRef} onLoad={onLoad} />
+      <EmailEditor
+        ref={emailEditorRef}
+        onLoad={onLoad}
+        options={{
+          // id: 'editor-container',
+          id: 'editor',
+          // projectId: 6381,
+          projectId: 6482,
+          // templateId: '[TEMPLATE-ID]'
+          // projectId: 1234,
+          displayMode: 'email',
+          customJS: [
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-basic.js'
+            // './custom.js',
+            // 'https://examples.unlayer.com/examples/react-custom-tool/custom.js'
+          ],
+          tools: {
+            form: {
+              enabled: true
+            }
+          },
+          appearance: {
+            theme: 'light',
+            panels: {
+              tools: {
+                dock: 'right'
+              }
+            }
+          }
+        }}
+      />
     </div>
   )
 }
 
-export default App
+export default BrandedPageEditor
 
-/* import React, { Component } from "react";
-import { loadScript } from "./loadScript";
-// import pkg from "../package.json";
-
-let lastEditorId = 0;
-
-class BrandedPageEditor extends Component {
-  componentDidMount() {
-    loadScript(this.loadEditor);
-  }
-
-  render() {
-    let {
-      props: { minHeight = 500, style = {} },
-    } = this;
-
-    // this.editorId = `editor-${++lastEditorId}`;
-    this.editorId = `editor-${lastEditorId}`;
-
-    return (
-      <div
-        style={{
-          flex: 1,
-          display: "flex",
-          minHeight: minHeight,
-        }}
-      >
-        <div id={this.editorId} style={{ ...style, flex: 1 }} />
-      </div>
-    );
-  }
-
-  loadEditor = () => {
-    const options = this.props.options || {};
-
-    if (this.props.projectId) {
-      options.projectId = this.props.projectId;
-    }
-
-    if (this.props.tools) {
-      options.tools = this.props.tools;
-    }
-
-    if (this.props.appearance) {
-      options.appearance = this.props.appearance;
-    }
-
-    if (this.props.locale) {
-      options.locale = this.props.locale;
-    }
-
-    console.log("EDITOR ID", this.editorId);
-    // eslint-disable-next-line no-undef
-    this.editor = unlayer.createEditor({
-      ...options,
-      id: this.editorId,
-      displayMode: "email",
-      source: {
-        // name: pkg.name,
-        // version: pkg.version,
-        name: "react-email-editor",
-        version: "1.1.1",
-      },
-    });
-
-    // All properties starting with on[Name] are registered as event listeners.
-    for (const [key, value] of Object.entries(this.props)) {
-      if (/^on/.test(key) && key != "onLoad") {
-        this.addEventListener(key, value);
-      }
-    }
-
-    const { onLoad } = this.props;
-    onLoad && onLoad();
-  };
-
-  registerCallback = (type, callback) => {
-    this.editor.registerCallback(type, callback);
-  };
-
-  addEventListener = (type, callback) => {
-    this.editor.addEventListener(type, callback);
-  };
-
-  loadDesign = (design) => {
-    this.editor.loadDesign(design);
-  };
-
-  saveDesign = (callback) => {
-    this.editor.saveDesign(callback);
-  };
-
-  exportHtml = (callback) => {
-    this.editor.exportHtml(callback);
-  };
-
-  setMergeTags = (mergeTags) => {
-    this.editor.setMergeTags(mergeTags);
-  };
-} */
-
-/* export default BrandedPageEditor; */
 /* 
   options={{
     id: "editor-container",
