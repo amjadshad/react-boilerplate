@@ -63,9 +63,9 @@ const BrandedPageEditor = (props) => {
           customJS: [
             'https://test-custom-tool.s3.us-east-2.amazonaws.com/property-editor.js',
             'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-basic.js',
-
             'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-with-data.js',
-            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-window.js'
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-window.js',
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-import.js'
           ],
           tools: {
             form: {
