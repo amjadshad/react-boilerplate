@@ -15,7 +15,7 @@ const BrandedPageEditor = (props) => {
   const exportHtml = () => {
     emailEditorRef.current.editor.exportHtml((data) => {
       const { design, html } = data
-      console.log('exportHtml', html)
+      console.log('===EXPORTED HTML:\n\n', html)
     })
   }
 
@@ -59,15 +59,30 @@ const BrandedPageEditor = (props) => {
           projectId: 6482,
           // templateId: '[TEMPLATE-ID]'
           // projectId: 1234,
-          displayMode: 'email',
+          displayMode: 'web',
           customJS: [
-            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-basic.js'
-            // './custom.js',
-            // 'https://examples.unlayer.com/examples/react-custom-tool/custom.js'
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/property-editor.js',
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-basic.js',
+
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-with-data.js',
+            'https://test-custom-tool.s3.us-east-2.amazonaws.com/custom-window.js'
           ],
           tools: {
             form: {
               enabled: true
+            },
+            // video: {
+            //   enabled: true
+            // },
+            timer: {
+              enabled: true
+            },
+            'custom#my_data_tool': {
+              data: {
+                name: 'Irving',
+                age: '27k',
+                photo: 'https://picsum.photos/id/1005/200'
+              }
             }
           },
           appearance: {
@@ -85,11 +100,3 @@ const BrandedPageEditor = (props) => {
 }
 
 export default BrandedPageEditor
-
-/* 
-  options={{
-    id: "editor-container",
-    projectId: 1234,
-    displayMode: "email",
-  }}
-          */
